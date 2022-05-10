@@ -8,8 +8,19 @@
 
 #_Создаем объект namespace_
 
-![namespace-object](images/namespace-yaml.png)
+> ```
+> apiVersion: v1
+> kind: Namespace
+> metadata:
+>   name: webapp
+> ```
+
+```
+
+
 ![namespace-list](images/namespace-list.png)
+
+
 ### 3. Напишите deployments файл для установки в Kubernetes простого веб приложения, например `https://github.com/crccheck/docker-hello-world`.
 
 ### 4. Установите в кластер `ingress` контроллер.
@@ -23,6 +34,8 @@
 ### `kubectl get all`
 
 ### а также все написанные вами фалы конфигурации
+
+```
 
 ```
 
