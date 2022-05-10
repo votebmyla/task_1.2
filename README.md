@@ -12,7 +12,7 @@
 > apiVersion: v1
 > kind: Namespace
 > metadata:
->   name: webapp
+>   name: webapp-ns
 > ```
 
 ![namespace-list](images/namespace-list.png)
