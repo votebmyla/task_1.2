@@ -8,7 +8,7 @@
 
 #_Создаем объект namespace_
 
-!(yaml file)[/images/namespace-yaml.png]
+!(yaml file)[./images/namespace-yaml.png]
 
 ### 3. Напишите deployments файл для установки в Kubernetes простого веб приложения, например `https://github.com/crccheck/docker-hello-world`.
 
