@@ -26,6 +26,7 @@
 > kind: Deployment
 > metadata:
 >   name: webapp-deployment
+>   namespace: webapp-ns
 >   labels:
 >     app: webapp
 > spec:
@@ -39,7 +40,7 @@
 >         app: webapp
 >     spec:
 >       containers:
->       - name: simple-webapp
+>       - name: webapp-container
 >         image: crccheck/hello-world
 >         ports:
 >         - containerPort: 8000
@@ -79,11 +80,14 @@
 >               number: 3000
 > ```
 
-> `kubectl get pods -A` > ![pods](images/pods.png)
+> `kubectl get pods -A`\
+> ![pods](images/pods.png)
 
-> `kubectl get svc` > ![services](images/services.png)
+> `kubectl get svc`\
+> ![services](images/services.png)
 
-> `kubectl get all` > ![all](images/all.png)
+> `kubectl get all`\
+> ![all](images/all.png)
 
 ### а также все написанные вами фалы конфигурации
 
