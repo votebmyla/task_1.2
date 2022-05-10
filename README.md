@@ -2,7 +2,13 @@
 
 ### 1. Установите minikube согласно инструкции на официальном сайте.
 
+#_Установил по инструкции на официальном сайте `https://kubernetes.io/ru/docs/tasks/tools/install-minikube/`_
+
 ### 2. Создайте namespace для деплоя простого веб приложения.
+
+#_Создаем объект namespace_
+
+!(yaml file)[/images/namespace-yaml.png]
 
 ### 3. Напишите deployments файл для установки в Kubernetes простого веб приложения, например `https://github.com/crccheck/docker-hello-world`.
 
@@ -17,3 +23,7 @@
 ### `kubectl get all`
 
 ### а также все написанные вами фалы конфигурации
+
+```
+
+```
