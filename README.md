@@ -53,20 +53,38 @@
 
 ### 4. Установите в кластер `ingress` контроллер.
 
+> `minikube addons enable ingress`
+
+![ingress](images/ingress-controller.png)
+
 ### 5. Напишите и установите `Ingress rule` для получения доступа к своему приложению. В качестве результата работы сделайте скриншоты результата выполнения команд:
 
-### `kubectl get pods -A`
+> ```
+> apiVersion: networking.k8s.io/v1
+> kind: Ingress
+> metadata:
+>   name: webapp-ingress
+>   namespace: webapp-ns
+> spec:
+>   rules:
+>   - host: webapp.loc
+>     http:
+>       paths:
+>       - path: /
+>         pathType: Prefix
+>         backend:
+>           service:
+>             name: webapp-service
+>             port:
+>               number: 3000
+> ```
 
-### `kubectl get svc`
+> `kubectl get pods -A` > ![pods](images/pods.png)
 
-### `kubectl get all`
+> `kubectl get svc` > ![services](images/services.png)
+
+> `kubectl get all` > ![all](images/all.png)
 
 ### а также все написанные вами фалы конфигурации
 
-```
-
-```
-
-```
-
-```
+#_Файлы конфигураций находятся в соответствующих папках subtask_
