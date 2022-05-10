@@ -19,6 +19,38 @@
 
 ### 3. Напишите deployments файл для установки в Kubernetes простого веб приложения, например `https://github.com/crccheck/docker-hello-world`.
 
+#_Deployment веб-приложения_
+
+> ```
+> apiVersion: apps/v1
+> kind: Deployment
+> metadata:
+>   name: webapp-deployment
+>   labels:
+>     app: webapp
+> spec:
+>   replicas: 1
+>   selector:
+>     matchLabels:
+>       app: webapp
+>   template:
+>     metadata:
+>       labels:
+>         app: webapp
+>     spec:
+>       containers:
+>       - name: simple-webapp
+>         image: crccheck/hello-world
+>         ports:
+>         - containerPort: 8000
+> ```
+
+#_Запуск веб-приложения_
+![deployment-command](images/deployment-command.png)
+
+#_Результат_
+![deployment-webapp](images/deployment-webapp.png)
+
 ### 4. Установите в кластер `ingress` контроллер.
 
 ### 5. Напишите и установите `Ingress rule` для получения доступа к своему приложению. В качестве результата работы сделайте скриншоты результата выполнения команд:
