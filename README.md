@@ -15,11 +15,7 @@
 >   name: webapp
 > ```
 
-```
-
-
 ![namespace-list](images/namespace-list.png)
-
 
 ### 3. Напишите deployments файл для установки в Kubernetes простого веб приложения, например `https://github.com/crccheck/docker-hello-world`.
 
@@ -34,6 +30,8 @@
 ### `kubectl get all`
 
 ### а также все написанные вами фалы конфигурации
+
+```
 
 ```
 
